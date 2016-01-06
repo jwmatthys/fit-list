@@ -1,0 +1,27 @@
+#N canvas 1 56 872 300 10;
+#X floatatom 51 258 5 0 0 0 - - -, f 5;
+#X obj 51 118 vsl 15 128 48 84 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 5100 1;
+#X obj 149 87 fit-list;
+#X obj 149 117 vsl 15 128 48 84 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 4939 1;
+#X floatatom 149 258 5 0 0 0 - - -, f 5;
+#X msg 590 86 \; fit-list-test 0 62 63 65 67 68 70 72;
+#X obj 590 63 loadbang;
+#X msg 184 51 set fit-list-test;
+#X obj 590 41 table fit-list-test 7;
+#X msg 124 24 set 60 62 64 65 67 69 71 72;
+#X text 298 24 set list of values to fit;
+#X text 302 51 or set an array name filled with values;
+#X text 299 86 * values must be in ascending order;
+#X obj 264 148 cnv 15 350 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X text 287 159 fit-list - quantizes an incoming stream of data;
+#X text 354 177 onto an established list of values;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 2 0 3 0;
+#X connect 3 0 4 0;
+#X connect 6 0 5 0;
+#X connect 7 0 2 0;
+#X connect 9 0 2 0;
